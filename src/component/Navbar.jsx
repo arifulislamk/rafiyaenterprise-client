@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiPhone, FiMapPin, FiMenu, FiX } from "react-icons/fi";
 import dbbllogo from "../../public/images (1).jpg";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -45,9 +45,9 @@ const Navbar = () => {
 
           <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
             <li>
-              <a href="#home" className="hover:text-[#00843D] transition">
+              <Link to={"/"} className="hover:text-[#00843D] transition">
                 হোম
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -63,9 +63,9 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="#contact" className="hover:text-[#00843D] transition">
+              <Link to={"/contact"} className="hover:text-[#00843D] transition">
                 যোগাযোগ
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -110,7 +110,8 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a href="#contact">যোগাযোগ</a>
+
+                <Link to={"/contact"} >যোগাযোগ</Link>
               </li>
             </ul>
 
