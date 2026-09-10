@@ -57,9 +57,9 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="#services" className="hover:text-[#00843D] transition">
+              <Link to={"/services"} href="#services" className="hover:text-[#00843D] transition">
                 সেবা সমূহ
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -69,7 +69,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <button
+          <Link to={"/AccountOpen"}
             className="
             hidden md:block
             bg-[#00843D]
@@ -84,7 +84,7 @@ const Navbar = () => {
             "
           >
             একাউন্ট খুলুন
-          </button>
+          </Link>
 
           <button
             onClick={() => setOpen(!open)}
@@ -106,7 +106,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a href="#services">সেবা সমূহ</a>
+                <Link to={"/services"} >সেবা সমূহ</Link>
               </li>
 
               <li>
@@ -115,7 +115,7 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <button
+            <Link to={"/AccountOpen"}
               className="
                 mt-5
                 w-full
@@ -127,7 +127,7 @@ const Navbar = () => {
                 "
             >
               একাউন্ট খুলুন
-            </button>
+            </Link>
           </div>
         )}
       </nav>

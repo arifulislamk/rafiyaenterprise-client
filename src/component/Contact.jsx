@@ -39,42 +39,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#f8faf8]">
+    <section id="contact" className=" py-10 md:py-20 bg-[#f8faf8]">
       <div className="max-w-7xl mx-auto px-5">
-
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-[#E31E24] font-semibold">
-            যোগাযোগ করুন
-          </p>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-[#006B32] mt-2">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#006B32] mt-2">
             আমরা আপনার সেবায় প্রস্তুত
           </h2>
-
           <div className="w-20 h-1 bg-[#E31E24] mx-auto mt-4 rounded-full"></div>
-
           <p className="text-gray-600 mt-5 leading-relaxed">
-            DBBL একাউন্ট, FDR, DPS অথবা অন্যান্য ব্যাংকিং সেবা সম্পর্কে
-            জানতে আমাদের সাথে যোগাযোগ করুন।
+            DBBL একাউন্ট, FDR, DPS অথবা অন্যান্য ব্যাংকিং সেবা সম্পর্কে জানতে
+            আমাদের সাথে যোগাযোগ করুন।
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-
           <div className="lg:col-span-2 bg-gradient-to-br from-[#006B32] to-[#00843D] text-white rounded-3xl p-8 md:p-10 shadow-lg">
+            <h3 className="text-2xl font-bold">রাফিয়া এন্টারপ্রাইজ</h3>
 
-            <h3 className="text-2xl font-bold">
-              রাফিয়া এন্টারপ্রাইজ
-            </h3>
-
-            <p className="text-white/80 mt-2">
-              DBBL এজেন্ট ব্যাংকিং আউটলেট
-            </p>
+            <p className="text-white/80 mt-2">DBBL এজেন্ট ব্যাংকিং আউটলেট</p>
 
             <div className="w-16 h-1 bg-[#E31E24] mt-5 rounded-full"></div>
 
             <div className="space-y-7 mt-8">
-
               <div className="flex items-start gap-4">
                 <div className="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
                   <FiMapPin className="text-xl" />
@@ -97,9 +83,7 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold">সেবা সময়</p>
 
-                  <p className="text-white/80 mt-1">
-                    সকাল ৮টা - রাত ৮টা
-                  </p>
+                  <p className="text-white/80 mt-1">সকাল ৮টা - রাত ৮টা</p>
 
                   <p className="text-white/70 text-sm mt-1">
                     বিরতি: দুপুর ১২:৩০ - ২:০০
@@ -115,9 +99,7 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold">পরিচালক</p>
 
-                  <p className="text-white/80 mt-1">
-                    মোঃ রফিকুল ইসলাম
-                  </p>
+                  <p className="text-white/80 mt-1">মোঃ রফিকুল ইসলাম</p>
                 </div>
               </div>
 
@@ -137,7 +119,6 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-
             </div>
 
             <a
@@ -147,13 +128,10 @@ const Contact = () => {
               <FiPhone />
               এখনই কল করুন
             </a>
-
           </div>
 
           <div className="lg:col-span-3 bg-white rounded-3xl p-7 md:p-10 shadow-lg border border-gray-100">
-
             <div className="flex items-center gap-3 mb-7">
-
               <div className="w-12 h-12 bg-[#00843D]/10 rounded-xl flex items-center justify-center">
                 <FiMessageSquare className="text-[#00843D] text-xl" />
               </div>
@@ -167,13 +145,10 @@ const Contact = () => {
                   আপনার প্রয়োজনীয় তথ্য লিখুন
                 </p>
               </div>
-
             </div>
 
             <form onSubmit={handleSubmit}>
-
               <div className="grid md:grid-cols-2 gap-5">
-
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     আপনার নাম
@@ -205,15 +180,12 @@ const Contact = () => {
                     className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 bg-white outline-none focus:border-[#00843D] focus:ring-2 focus:ring-[#00843D]/10 transition"
                   />
                 </div>
-
               </div>
 
               <div className="mt-5">
-
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   কোন সেবা সম্পর্কে জানতে চান?
                 </label>
-
                 <select
                   name="service"
                   value={formData.service}
@@ -240,40 +212,22 @@ const Contact = () => {
                   <option value="" className="bg-white text-gray-700">
                     সেবা নির্বাচন করুন
                   </option>
-
-                  <option
-                    value="account"
-                    className="bg-white text-[#006B32]"
-                  >
+                  <option value="account" className="bg-white text-[#006B32]">
                     নতুন DBBL একাউন্ট
                   </option>
-
-                  <option
-                    value="fdr"
-                    className="bg-white text-[#006B32]"
-                  >
+                  <option value="fdr" className="bg-white text-[#006B32]">
                     FDR খোলা
                   </option>
-
-                  <option
-                    value="dps"
-                    className="bg-white text-[#006B32]"
-                  >
+                  <option value="dps" className="bg-white text-[#006B32]">
                     DPS খোলা
                   </option>
-
-                  <option
-                    value="other"
-                    className="bg-white text-[#E31E24]"
-                  >
+                  <option value="other" className="bg-white text-[#E31E24]">
                     অন্যান্য তথ্য
                   </option>
                 </select>
-
               </div>
 
               <div className="mt-5">
-
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   আপনার বার্তা
                 </label>
@@ -286,7 +240,6 @@ const Contact = () => {
                   placeholder="আপনার প্রশ্ন বা প্রয়োজনীয় তথ্য লিখুন..."
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 bg-white outline-none resize-none focus:border-[#00843D] focus:ring-2 focus:ring-[#00843D]/10 transition"
                 ></textarea>
-
               </div>
 
               <button
@@ -296,13 +249,9 @@ const Contact = () => {
                 <FiSend />
                 বার্তা পাঠান
               </button>
-
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
