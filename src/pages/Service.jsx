@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import {
   FiUserPlus,
   FiTrendingUp,
@@ -10,18 +11,21 @@ const Services = () => {
   const services = [
     {
       icon: <FiUserPlus />,
+      link: "/AccountOpen",
       title: "নতুন DBBL একাউন্ট",
       description:
         "প্রয়োজনীয় কাগজপত্রসহ সহজ প্রক্রিয়ায় নতুন Dutch-Bangla Bank একাউন্ট খোলার সেবা প্রদান করা হয়।",
     },
     {
       icon: <FiTrendingUp />,
+      link: "/FdrOpen",
       title: "FDR সেবা",
       description:
         "আপনার সঞ্চয় নিরাপদ ও পরিকল্পিতভাবে সংরক্ষণের জন্য DBBL FDR খোলার প্রয়োজনীয় সহায়তা প্রদান করা হয়।",
     },
     {
       icon: <FiCreditCard />,
+      link: "/DpsOpen",
       title: "DPS সেবা",
       description:
         "নিয়মিত সঞ্চয়ের জন্য DBBL DPS খোলার প্রক্রিয়ায় প্রয়োজনীয় তথ্য ও সহায়তা পাওয়া যায়।",
@@ -31,11 +35,8 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-[#f8faf8]">
       <div className="max-w-7xl mx-auto px-5">
-
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#E31E24] font-semibold mb-2">
-            আমাদের সেবা
-          </p>
+          <p className="text-[#E31E24] font-semibold mb-2">আমাদের সেবা</p>
 
           <h2 className="text-3xl md:text-4xl font-bold text-[#006B32]">
             আপনার প্রয়োজনীয় ব্যাংকিং সেবা
@@ -44,13 +45,12 @@ const Services = () => {
           <div className="w-20 h-1 bg-[#E31E24] mx-auto mt-4 rounded-full"></div>
 
           <p className="text-gray-600 mt-5 leading-relaxed">
-            রাফিয়া এন্টারপ্রাইজে DBBL এজেন্ট ব্যাংকিংয়ের গুরুত্বপূর্ণ
-            সেবাগুলো সহজ, নির্ভরযোগ্য ও গ্রাহকবান্ধবভাবে প্রদান করা হয়।
+            রাফিয়া এন্টারপ্রাইজে DBBL এজেন্ট ব্যাংকিংয়ের গুরুত্বপূর্ণ সেবাগুলো
+            সহজ, নির্ভরযোগ্য ও গ্রাহকবান্ধবভাবে প্রদান করা হয়।
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-
           {services.map((service, index) => (
             <div
               key={index}
@@ -68,7 +68,6 @@ const Services = () => {
               duration-300
               "
             >
-
               <div
                 className="
                 w-14
@@ -96,8 +95,8 @@ const Services = () => {
                 {service.description}
               </p>
 
-              <a
-                href="#contact"
+              <Link
+                to={service.link}
                 className="
                 inline-flex
                 items-center
@@ -111,11 +110,9 @@ const Services = () => {
               >
                 বিস্তারিত জানুন
                 <FiArrowRight />
-              </a>
-
+              </Link>
             </div>
           ))}
-
         </div>
 
         <div
@@ -136,7 +133,6 @@ const Services = () => {
           gap-5
           "
         >
-
           <div className="text-white">
             <h3 className="text-2xl font-bold">
               ব্যাংকিং সেবা সম্পর্কে জানতে চান?
@@ -147,7 +143,8 @@ const Services = () => {
             </p>
           </div>
 
-          <a
+          <Link
+            to="/contact"
             href="#contact"
             className="
             shrink-0
@@ -163,10 +160,8 @@ const Services = () => {
             "
           >
             যোগাযোগ করুন
-          </a>
-
+          </Link>
         </div>
-
       </div>
     </section>
   );

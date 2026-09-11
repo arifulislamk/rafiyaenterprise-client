@@ -25,7 +25,7 @@ const Navbar = () => {
 
       <nav className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <Link to={"/"} className="flex items-center gap-4">
             <img
               src={dbbllogo}
               alt="DBBL Logo"
@@ -41,7 +41,7 @@ const Navbar = () => {
                 DBBL এজেন্ট ব্যাংকিং আউটলেট
               </p>
             </div>
-          </div>
+          </Link>
 
           <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
             <li>
