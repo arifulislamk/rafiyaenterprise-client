@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Services from "../pages/Service";
 import Contact from "../component/Contact";
 import AccountOpen from "../pages/AccountOpen";
+import FdrOpen from "../pages/FdrOpen";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         {
           path: "/AccountOpen",
           element: <AccountOpen />,
+        },
+        {
+          path: "/FdrOpen" ,
+          element: <FdrOpen />,
         }
     ]
   },
